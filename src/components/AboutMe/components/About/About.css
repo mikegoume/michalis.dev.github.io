@@ -1,0 +1,23 @@
+.about-image-container {
+  animation: move 2s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+  z-index: 5;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-10%);
+  }
+  /* 25% {
+    transform: translateY(-20%);
+  } */
+  50% {
+    transform: translateY(10%);
+  }
+  /* 75% {
+    transform: translateY(20%);
+  } */
+  100% {
+    transform: translateY(-10%);
+  }
+}

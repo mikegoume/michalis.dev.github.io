@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/michalis.dev.github.io/static/css/main.3f8d971e.css",
+    "main.js": "/michalis.dev.github.io/static/js/main.f296f3f7.js",
+    "static/media/freelance.jpg": "/michalis.dev.github.io/static/media/freelance.f484738a24227d1e287a.jpg",
+    "static/media/careerBreak.jpg": "/michalis.dev.github.io/static/media/careerBreak.2c46929b3dff7114e15a.jpg",
+    "static/media/About.svg": "/michalis.dev.github.io/static/media/About.a555c82f0e6e0e36cb703b9a623cdf63.svg",
+    "static/media/ordereze.png": "/michalis.dev.github.io/static/media/ordereze.8da7b3dddf02bed6f43c.png",
+    "static/media/profilePicture.jpg": "/michalis.dev.github.io/static/media/profilePicture.bcac911e0b7084adde57.jpg",
+    "static/media/proseed.jpg": "/michalis.dev.github.io/static/media/proseed.d5d0eadf16c3ada43ab9.jpg",
+    "static/media/schoox.png": "/michalis.dev.github.io/static/media/schoox.7bb2c2750a999ce2f2a6.png",
+    "index.html": "/michalis.dev.github.io/index.html",
+    "main.3f8d971e.css.map": "/michalis.dev.github.io/static/css/main.3f8d971e.css.map",
+    "main.f296f3f7.js.map": "/michalis.dev.github.io/static/js/main.f296f3f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f8d971e.css",
+    "static/js/main.f296f3f7.js"
+  ]
+}

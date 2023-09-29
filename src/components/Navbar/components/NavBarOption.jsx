@@ -2,13 +2,13 @@ import React from "react";
 import { Button } from "@mui/material";
 import { memo } from "react";
 
-const NavBarOption = ({ id, title, componentToScrollId }) => {
+const NavBarOption = ({ id, title, componentToScrollId, clickAction }) => {
   const handleScreenScroll = () => {
-    console.log(componentToScrollId);
     const element = document.getElementById(componentToScrollId);
 
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      clickAction();
     }
   };
 

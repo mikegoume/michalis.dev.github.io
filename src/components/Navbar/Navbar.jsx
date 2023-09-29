@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classNames from "classnames";
 import NavBarOption from "./components/NavBarOption";
 
@@ -14,6 +14,10 @@ const Navbar = () => {
     { id: "04", componentToScrollId: "contact-container", title: "Contact" },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  isMenuOpen
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "scroll");
 
   const handleButtonClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -55,12 +59,20 @@ const Navbar = () => {
       {isMenuOpen && (
         <div
           id="menu"
-          className="absolute flex flex-col items-center self-end height-full py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow z-50"
+          className="absolute flex flex-col items-center self-end h-screen space-y-6 font-bold bg-black bg-opacity-50 w-full sm:self-center  drop-shadow z-50"
+          onClick={() => setIsMenuOpen(false)}
         >
-          <a href="#about">About</a>
-          <a href="#workExperience">Work Experience</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+          <div className="flex flex-col self-end py-8 px-8 h-screen bg-white space-y-6 items-start">
+            {navBarOptions.map((option) => (
+              <NavBarOption
+                key={option.id}
+                id={option.id}
+                componentToScrollId={option.componentToScrollId}
+                title={option.title}
+                clickAction={() => setIsMenuOpen(false)}
+              />
+            ))}
+          </div>
         </div>
       )}
     </nav>

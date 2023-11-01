@@ -13,7 +13,7 @@ function ContactMe() {
   return (
     <div
       id="contact-container"
-      className="flex flex-col my-10 text-white lg:flex-row pt-20 justify-center lg:w-full mx-auto"
+      className="flex flex-col min-h-screen mt-10 text-white lg:flex-row pt-20 justify-center lg:w-full mx-auto"
     >
       <div className="px-6 py-24 bg-orange lg:w-1/3 lg:rounded-l-xl lg:rounded-tr-none">
         <p className="text-2xl text-left font-bold mb-5">Get in touch</p>

@@ -14,8 +14,8 @@ const NavBarOption = ({ id, title, componentToScrollId, clickAction }) => {
 
   return (
     <Button onClick={handleScreenScroll}>
-      <p className="font-sans text-sm text-black font-semibold">
-        <span className="font-sans text-xs text-orange">{id}.</span>
+      <p className="font-sans text-sm text-white font-semibold">
+        {/* <span className="font-sans text-xs text-darkorange">{id}.</span> */}
         {title}
       </p>
     </Button>

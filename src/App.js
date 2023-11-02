@@ -3,7 +3,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Skills from "./screens/Skills/Skills";
 import Opening from "./components/Opening/Opening";
 import AboutMe from "./screens/AboutMe/AboutMe";
-import ContactMe from "./components/ContactMe/ContactMe";
+import Portfolio from "./screens/Portfolio/Portfolio";
+import ContactMe from "./screens/ContactMe/ContactMe";
 import "./index.css";
 import "./App.css";
 
@@ -23,6 +24,7 @@ function App() {
             <Opening />
             <AboutMe />
             <Skills />
+            <Portfolio />
             <ContactMe />
           </div>
           {/* <Footer /> */}

@@ -54,7 +54,7 @@ const SkillCard = (props) => {
             />
           </svg>
         )}
-        <p className="text-center text-base text-white font-bold">
+        <p className="text-center text-xl text-white font-extrabold">
           {skillTitle}
         </p>
       </div>
@@ -62,7 +62,7 @@ const SkillCard = (props) => {
       <div className="p-6 flex-column justify-content:center align-items:center">
         {skillList &&
           skillList.map((skill, index) => (
-            <p key={index} className="text-center text-base lg:text-base ">
+            <p key={index} className="text-center font-sans text-sm lg:text-lg">
               {skill}
             </p>
           ))}

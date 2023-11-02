@@ -13,14 +13,14 @@ function ContactMe() {
   return (
     <div
       id="contact-container"
-      className="flex flex-col min-h-screen mt-10 text-white lg:flex-row pt-20 justify-center lg:w-full mx-auto"
+      className="flex flex-col  mt-10 text-white lg:flex-row pt-20 justify-center lg:w-full mx-auto"
     >
       <div className="px-6 py-24 bg-orange lg:w-1/3 lg:rounded-l-xl lg:rounded-tr-none">
-        <p className="text-2xl text-left font-bold mb-5">Get in touch</p>
+        <p className="text-3xl text-left font-extrabold mb-3">Get in touch</p>
         <p className="text-lg text-left font-semibold">
           Don't be shy! Hit me up
         </p>
-        <p className="text-left text-lg mb-5">
+        <p className="text-left text-xl mb-8">
           You can contact me on my social media either send me an email.
         </p>
         <div className="flex flex-row gap-2">

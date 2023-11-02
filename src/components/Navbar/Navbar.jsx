@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -8,6 +8,8 @@ import NavBarOption from "./components/NavBarOption";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const navBarRef = useRef();
+
   const navBarOptions = [
     { id: "01", componentToScrollId: "about-container", title: "About" },
     {
@@ -33,22 +35,37 @@ const Navbar = () => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
-  useEffect(() => {}, []);
-
   const burgerButtonClassnames = classNames({
     "block hamburger lg:hidden focus:outline-none": true,
     open: isMenuOpen === true,
   });
 
+  const handleNavbarChangeClasses = () => {
+    // if (window.scrollY > 0) {
+    //   navBarRef.current.style.backgroundColor = "white";
+    //   navBarRef.current.style.color = "orange";
+    // } else {
+    //   navBarRef.current.style.backgroundColor = "orange";
+    //   navBarRef.current.style.color = "white";
+    // }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleNavbarChangeClasses);
+
+    return () =>
+      window.removeEventListener("scroll", handleNavbarChangeClasses);
+  }, []);
+
   return (
-    <nav className="fixed w-screen top-0 z-50 bg-black border-b border-graylight">
+    <nav ref={navBarRef} className="fixed w-screen top-0 z-50 bg-orange">
       <div className="w-screen h-20 container mx-auto flex justify-between ">
         <p className="font-sans italic text-xl flex items-center text-white">
-          <span className="font-sans italic text-lg flex items-center text-darkorange">
+          <span className="font-sans italic text-lg flex items-center text-orange">
             {"< "}
           </span>
           {"MICHALIS.DEV"}
-          <span className="font-sans italic text-lg flex items-center text-darkorange">
+          <span className="font-sans italic text-lg flex items-center text-orange">
             {" />"}
           </span>
         </p>
@@ -74,7 +91,10 @@ const Navbar = () => {
                 )
               }
             >
-              <LinkedInIcon fontSize="large" sx={{ color: "white" }} />
+              <LinkedInIcon
+                fontSize="large"
+                sx={{ color: window.scrollY > 0 ? "orange" : "white" }}
+              />
             </IconButton>
             <IconButton
               size="large"
